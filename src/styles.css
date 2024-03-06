@@ -1,11 +1,12 @@
-/* Tailwind directives  */
+/* directives  */
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* You can add global styles to this file, and also import other style files */
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -18,10 +19,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; */
+  --angular-gradient: linear-gradient(to right, #ef4444, #fb923c, #f6e05e);
 }
 
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
@@ -68,9 +70,9 @@ button:focus-visible {
 
 .logo {
   @apply box-content;
-}
+} */
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -81,4 +83,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

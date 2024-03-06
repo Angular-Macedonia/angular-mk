@@ -1,0 +1,53 @@
+.bi-moon {
+    left: 24px;
+    position: relative;
+    z-index: 100;
+    animation-name: slideout;
+    animation-duration: 0.1s;
+
+}
+
+.bi-sun {
+    position: relative;
+    z-index: 100;
+    left: 4px;
+    animation-duration: 0.1s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+@keyframes slideout {
+    from {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    to {
+        margin-left: 100%;
+        width: 300%;
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .hover-shake:hover {
+    animation: shake 0.5s ease;
+  }
+  

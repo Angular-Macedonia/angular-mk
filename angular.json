@@ -15,7 +15,10 @@
             "configFile": "vite.config.ts",
             "main": "src/main.ts",
             "outputPath": "dist/client",
-            "tsConfig": "tsconfig.app.json"
+            "tsConfig": "tsconfig.app.json",
+            "styles": [
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css"
+            ]
           },
           "defaultConfiguration": "production",
           "configurations": {
