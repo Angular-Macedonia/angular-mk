@@ -2,11 +2,12 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ThemeService } from '../../services/theme.service';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'amk-header',
   standalone: true,
-  imports: [CommonModule, FormsModule, NgOptimizedImage],
+  imports: [CommonModule, FormsModule, NgOptimizedImage, RouterLink, RouterLinkActive],
   providers: [ThemeService],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
@@ -14,7 +15,12 @@ import { ThemeService } from '../../services/theme.service';
 })
 export class HeaderComponent implements OnInit {
   isDarkTheme: boolean = false;
-  navigationItems: any = ['About', 'Blog', 'Team'];
+  // navigationItems: any = ['About', 'Blog', 'Team'];
+  navigationItems = [
+    { path: '/about', label: 'About' },
+    { path: '/blog', label: 'Blog' },
+    { path: '/team', label: 'Team' }
+  ];
 
   constructor(private themeService: ThemeService) { }
   ngOnInit(): void {
