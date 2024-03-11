@@ -1,1 +1,24 @@
-<p>blog works!</p>
+<div class="container mx-auto w-full p-5">
+    <h2 class="text-gray-900 text-center dark:text-white text-xl md:text-2xl font-bold">Blog</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+        @for(event of visibleEvents; track event) {
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+    
+            <div class="p-4 ">
+                <h2 class="text-lg font-bold dark:text-white">
+                    <a href="{{ event.link }}" class="hover:text-red-700 dark:hover:text-amber-500 underline">{{ event.title }}</a>
+                  </h2>
+                <p class="text-sm text-gray-600 dark:text-gray-300">{{ event.date }}</p>
+                <p class="text-sm text-gray-600 dark:text-gray-300">{{ event.description }}</p>
+            </div>
+        </div>
+        }
+    </div>
+    
+    <div class="mt-4 text-center">
+        @if (showLimit < pastEvents.length) { <button (click)="showAllPastEvents()"
+            class="px-4 py-2 bg-red-700 dark:bg-amber-500 text-white rounded">Show More</button>
+            }
+    </div>
+</div>

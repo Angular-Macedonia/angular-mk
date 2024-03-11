@@ -1,1 +1,18 @@
-<p>footer works!</p>
+<footer class="bg-gray-50 dark:bg-gray-800 p-8 mt-auto">
+    <div class="max-w-4xl mx-auto flex flex-col items-center">
+        <p class="text-md text-center text-gray-800 m-2 text-gray-900 dark:text-white">Made with <a
+                class="hover:text-red-700 hover:dark:text-amber-500" href="https://analogjs.org"
+                target="_blank">AnalogJS</a> ❤️</p>
+        <div class="flex space-x-4">
+            @for (link of socialMediaLinks; track link.name) {
+            <a [href]="link.url"
+                class="text-gray-900 dark:text-white hover:text-red-700 hover:dark:text-amber-500 flex items-center justify-center border border-gray-900 dark:border-white hover:border-red-700 hover:dark:border-amber-500 rounded-full w-10 h-10 hover-shake">
+                <i [class]="link.icon + ' text-xl'"></i>
+            </a>
+            }
+        </div>
+        <p class="text-md text-center text-gray-800 m-2 text-gray-900 dark:text-white">Angular Macedonia <i
+                class="bi bi-c-circle"></i>
+            2024</p>
+    </div>
+</footer>

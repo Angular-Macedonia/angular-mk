@@ -26,6 +26,11 @@ import { initFlowbite } from 'flowbite';
         margin-top: 4rem;
         flex: 1;
       }
+
+      amk-footer {
+        display: block;
+        height: 1vh;
+      }
     `,
   ] 
 })

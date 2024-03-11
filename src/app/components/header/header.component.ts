@@ -15,9 +15,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   isDarkTheme: boolean = false;
-  // navigationItems: any = ['About', 'Blog', 'Team'];
   navigationItems = [
     { path: '/about', label: 'About' },
+    {path: '/events', label: 'Events'},
     { path: '/blog', label: 'Blog' },
     { path: '/team', label: 'Team' }
   ];
