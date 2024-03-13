@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { pastEvents } from '../../../assets/data/past-events';
+import { PastEvents } from '../../../assets/data/past-events';
 import { Event } from "src/app/models/event.interface";
 
 @Component({
@@ -10,7 +10,7 @@ import { Event } from "src/app/models/event.interface";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EventDetailsComponent {
-  pastEvents: Event[] = pastEvents;
+  pastEvents: Event[] = PastEvents;
   showLimit: number = 6;
 
   showAllPastEvents() {

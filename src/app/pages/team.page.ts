@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TeamMember } from '../models/team-member.interface';
-import { teamMembers } from '../../assets/data/team-members';
+import { TeamMembers } from '../../assets/data/team-members';
 
 @Component({
   standalone: true,
@@ -40,5 +40,5 @@ import { teamMembers } from '../../assets/data/team-members';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class TeamPage {
-  readonly teamMembers: TeamMember[] = teamMembers;
+  readonly teamMembers: TeamMember[] = TeamMembers;
 }

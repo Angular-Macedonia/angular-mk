@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { pastEvents } from '../../../assets/data/past-events';
-import { Event } from "src/app/models/event.interface";
+import { BlogPost } from '../../models/blog-post.interface';
+import { BlogPosts } from '../../../assets/data/blogs';
 
 @Component({
   selector: 'amk-blog',
@@ -10,14 +10,14 @@ import { Event } from "src/app/models/event.interface";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BlogComponent {
-  pastEvents: Event[] = pastEvents;
+  blogPosts: BlogPost[] = BlogPosts;
   showLimit: number = 6;
 
-  get visibleEvents(): Event[] {
-    return this.pastEvents.slice(0, this.showLimit);
+  get visibleBlogs(): BlogPost[] {
+    return this.blogPosts.slice(0, this.showLimit);
   }
 
   showAllPastEvents() {
-    this.showLimit = this.pastEvents.length;
+    this.showLimit = this.blogPosts.length;
   }
 }

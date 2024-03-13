@@ -1,6 +1,6 @@
 import { Event } from "src/app/models/event.interface";
 
-export const pastEvents: Event[] = [
+export const PastEvents: Event[] = [
     { 
       title: 'Angular Workshop',
       description: 'Join us for an intensive Angular workshop covering advanced topics.',

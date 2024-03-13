@@ -1,6 +1,6 @@
 import { TeamMember } from "src/app/models/team-member.interface";
 
-export const teamMembers: TeamMember[] = [
+export const TeamMembers: TeamMember[] = [
     {
       name: 'Eva',
       description: 'Developer',
