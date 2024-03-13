@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
-import { RouteMeta } from '@analogjs/router';
 import { RouterLink } from '@angular/router';
+import { TeamMember } from '../models/team-member.interface';
+import { teamMembers } from '../../assets/data/team-members';
 
 @Component({
   standalone: true,
@@ -39,29 +40,5 @@ import { RouterLink } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class TeamPage {
-  readonly teamMembers: any = [
-    {
-      name: 'Eva',
-      description: 'Developer',
-      image: '/logo.png',
-      socialMedia: [
-        {
-          icon: 'bi bi-youtube', url: '#'
-        },
-        {
-          icon: 'bi bi-youtube', url: '#'
-        }
-      ]
-    },
-    {
-      name: 'Eva',
-      description: 'Developer',
-      image: '/logo.png'
-    },
-    {
-      name: 'Eva',
-      description: 'Developer',
-      image: '/logo.png'
-    }
-  ]
+  readonly teamMembers: TeamMember[] = teamMembers;
 }

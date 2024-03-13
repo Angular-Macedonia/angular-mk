@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
   selector: 'amk-about',
   standalone: true,
   imports: [],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.scss'
+  templateUrl: './about.component.html'
 })
 export class AboutComponent {
 
