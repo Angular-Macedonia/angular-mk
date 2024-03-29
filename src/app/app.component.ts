@@ -3,14 +3,16 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { initFlowbite } from 'flowbite';
+import { fromEvent, throttleTime } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
-  template: ` 
-    <amk-header/>
-    <main>
+  template: `
+    <amk-header [visible]='!hidden'/>
+    <main #scroller>
       <router-outlet/>
     </main>
     <amk-footer/>
@@ -32,10 +34,26 @@ import { initFlowbite } from 'flowbite';
         height: 1vh;
       }
     `,
-  ] 
+  ]
 })
-export class AppComponent implements OnInit { 
+export class AppComponent implements OnInit {
+
+  scrollTop = 0;
+  hidden = false;
+
+  constructor(
+  ) {}
+
   ngOnInit(): void {
     initFlowbite();
+    fromEvent(document, 'scroll').pipe(
+      throttleTime(100),
+    ).subscribe({
+      next: () => {
+        const st = document.documentElement.scrollTop;
+        this.hidden = st > this.scrollTop;
+        this.scrollTop = st;
+      }
+    })
   }
 }

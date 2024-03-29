@@ -8,7 +8,7 @@ import { TeamMembers } from '../../assets/data/team-members';
   standalone: true,
   imports: [NgFor, NgIf, RouterLink],
   template: `
-   <div class="container mx-auto w-full p-5  h-screen">
+   <div class="container mx-auto w-full lg:mt-32 p-5  h-screen" id='team'>
     <h2 class="text-gray-900 text-center dark:text-white text-xl md:text-2xl font-bold">Meet the team</h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">

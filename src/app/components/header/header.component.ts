@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ThemeService } from '../../services/theme.service';
@@ -16,15 +16,16 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 export class HeaderComponent implements OnInit {
   isDarkTheme: boolean = false;
   navigationItems = [
-    { path: '/about', label: 'About' },
-    {path: '/events', label: 'Events'},
-    { path: '/blog', label: 'Blog' },
+    { path: '.', label: 'About', },
+    { path: '.', label: 'Events' },
+    { path: '.', label: 'Blog' },
     { path: '/team', label: 'Team' }
   ];
+  @Input() visible = false;
 
   constructor(private themeService: ThemeService) { }
   ngOnInit(): void {
-    //set theme 
+    //set theme
     this.setCurrentTheme();
   }
 

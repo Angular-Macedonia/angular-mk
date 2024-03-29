@@ -1,3 +1,9 @@
+header .nav {
+  top: 0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
 .bi-moon {
     left: 24px;
     position: relative;
@@ -46,8 +52,16 @@
     75% { transform: translateX(-2px); }
     100% { transform: translateX(0); }
   }
-  
+
   .hover-shake:hover {
     animation: shake 0.5s ease;
   }
-  
+
+
+  .mk-visible {
+    transform: translateY(0);
+  }
+
+  .mk-hidden {
+    transform: translateY(-100%);
+  }

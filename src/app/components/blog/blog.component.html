@@ -4,7 +4,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
         @for(post of visibleBlogs; track post) {
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
-    
+
             <div class="p-4 ">
                 <h2 class="text-lg font-bold dark:text-white">
                     <a href="{{ post.link }}" class="hover:text-red-700 dark:hover:text-amber-500 underline">{{ post.title }}</a>
@@ -15,7 +15,7 @@
         </div>
         }
     </div>
-    
+
     <div class="mt-4 text-center">
         @if (showLimit < blogPosts.length) { <button (click)="showAllPastEvents()"
             class="px-4 py-2 bg-red-700 dark:bg-amber-500 text-white rounded">Show More</button>
