@@ -4,3 +4,15 @@
     color: transparent;
     background-image: var(--angular-gradient);
 }
+
+.logo-animate {
+  transition: transform 3s ease;
+}
+
+.logo-hidden {
+  transform: scale(0);
+}
+
+.logo-visible {
+  transform: scale(1);
+}

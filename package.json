@@ -27,6 +27,7 @@
     "@angular/router": "^17.2.0",
     "@nx/angular": "~18.0.0",
     "bootstrap-icons": "^1.11.3",
+    "flowbite": "^2.2.1",
     "front-matter": "^4.0.2",
     "marked": "^5.0.2",
     "marked-gfm-heading-id": "^3.1.0",
@@ -35,8 +36,7 @@
     "prismjs": "^1.29.0",
     "rxjs": "~7.5.6",
     "tslib": "^2.4.0",
-    "zone.js": "~0.14.0",
-    "flowbite": "^2.2.1"
+    "zone.js": "~0.14.0"
   },
   "devDependencies": {
     "@analogjs/platform": "^0.2.0",
