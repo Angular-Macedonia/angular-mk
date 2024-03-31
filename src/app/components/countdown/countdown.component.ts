@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-countdown',
@@ -7,7 +7,7 @@ import { Component, AfterViewInit, ChangeDetectorRef } from '@angular/core';
   templateUrl: './countdown.component.html',
   styleUrl: './countdown.component.scss'
 })
-export class CountdownComponent implements AfterViewInit {
+export class CountdownComponent implements OnInit {
   countdownDate: Date = new Date('2024-05-17T18:00:00');
   days: number = 0;
   hours: number = 0;
@@ -17,7 +17,7 @@ export class CountdownComponent implements AfterViewInit {
 
   constructor(private cdRef: ChangeDetectorRef) { }
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     this.calculateCountdown();
     this.countdown = setInterval(() => {
       this.calculateCountdown();

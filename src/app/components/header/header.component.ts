@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit {
   }
 
   setCurrentTheme() {
-    this.themeService.setCurrentTheme(localStorage.getItem('theme') || 'system');
+    this.themeService.setCurrentTheme(localStorage.getItem('theme') || 'light');
     this.isDarkTheme = this.themeService.currentTheme === 'dark';
   }
 }

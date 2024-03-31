@@ -9,7 +9,7 @@
     </div>
 </div> -->
 
-<div class="bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white p-5" id='events'>
+<div class="bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white p-5" id='events' data-aos='zoom-in'>
     <div class="container mx-auto text-center">
         <h2 class="text-xl md:text-2xl font-bold mb-4">Angular Mastery Bootcamp at Base 42: Unleash Your Full Potential
         </h2>
@@ -31,7 +31,11 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
         @for(event of visibleEvents; track event) {
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
+             data-aos="zoom-in"
+             data-aos-delay="50"
+             data-aos-duration="1000"
+        >
 
             <div class="p-4 ">
                 <h2 class="text-lg font-bold dark:text-white">
