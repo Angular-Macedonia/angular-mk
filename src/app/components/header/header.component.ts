@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
   navigationItems = [
     { path: '.', label: 'About', },
     { path: '.', label: 'Events' },
-    { path: '.', label: 'Blog' },
+    // { path: '.', label: 'Blog' },
     { path: '/team', label: 'Team' }
   ];
   @Input() visible = false;

@@ -16,7 +16,7 @@ import { AboutComponent } from "../components/about/about.component";
     <amk-banner/>
     <amk-about id='about'/>
     <amk-event-details id='events'/>
-    <amk-blog id='blog'/>
+    <!-- <amk-blog id='blog'/> -->
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

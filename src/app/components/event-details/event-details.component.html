@@ -1,13 +1,30 @@
-<div class="bg-red-700 dark:bg-amber-500 text-white py-3" id='events'>
+<!--Add for future evenets-->
+
+<!-- <div class="bg-red-700 dark:bg-amber-500 text-white py-3" id='events'>
     <div class="container mx-auto text-center">
         <h2 class="text-lg font-bold">Upcoming Event: Angular Signals</h2>
         <p class="text-lg">Wed, Feb 28, 2024, 6:00 PM CET</p>
         <a href="#" class="underline hover:text-gray-100">Join us!</a>
         <p class="text-lg">See you at our next event! 📅</p>
     </div>
+</div> -->
+
+<div class="bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white p-5" id='events'>
+    <div class="container mx-auto text-center">
+        <h2 class="text-xl md:text-2xl font-bold mb-4">Angular Mastery Bootcamp at Base 42: Unleash Your Full Potential
+        </h2>
+        <p class="text-lg">Join us at <a href="https://maps.app.goo.gl/hfznohdv1z15YyTJ8" target="_blank"
+                class="underline hover:text-red-700 dark:hover:text-amber-500">Base 42</a> for an intensive Angular
+            Mastery Bootcamp designed to elevate your skills
+            to the next level, taking place on 17-19 May at 18:00. Dive deep into Angular fundamentals, advanced techniques, and
+            best practices in a
+            hands-on learning environment. Whether you're a beginner or an experienced developer, this bootcamp will
+            equip you with the knowledge and expertise needed to build robust, scalable Angular applications. Don't miss
+            this opportunity to accelerate your career and become an Angular expert!</p>
+        <app-countdown />
+        <p class="text-lg">See you at our event! 📅</p>
+    </div>
 </div>
-
-
 
 <div class="container mx-auto w-full p-5">
     <h2 class="text-gray-900 text-center dark:text-white text-xl md:text-2xl font-bold">Past Events</h2>
@@ -18,8 +35,9 @@
 
             <div class="p-4 ">
                 <h2 class="text-lg font-bold dark:text-white">
-                    <a href="{{ event.link }}" class="hover:text-red-700 dark:hover:text-amber-500 underline">{{ event.title }}</a>
-                  </h2>
+                    <a href="{{ event.link }}" target="_blank"
+                        class="hover:text-red-700 dark:hover:text-amber-500 underline">{{ event.title }}</a>
+                </h2>
                 <p class="text-sm text-gray-600 dark:text-gray-300">{{ event.date }}</p>
                 <p class="text-sm text-gray-600 dark:text-gray-300">{{ event.description }}</p>
             </div>

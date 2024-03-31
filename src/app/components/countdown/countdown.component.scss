@@ -1,0 +1,6 @@
+.bg-gradient {
+    --angular-gradient: linear-gradient(to right, #ef4444, #ef4444, #fb923c, #f6e05e, #f6e05e);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: var(--angular-gradient);
+}

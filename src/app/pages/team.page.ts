@@ -8,7 +8,7 @@ import { TeamMembers } from '../../assets/data/team-members';
   standalone: true,
   imports: [NgFor, NgIf, RouterLink],
   template: `
-   <div class="container mx-auto w-full lg:mt-32 p-5  h-screen" id='team'>
+   <div class="container mx-auto w-full h-full lg:mt-32 p-5 min-h-screen" id='team'>
     <h2 class="text-gray-900 text-center dark:text-white text-xl md:text-2xl font-bold">Meet the team</h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
@@ -17,7 +17,7 @@ import { TeamMembers } from '../../assets/data/team-members';
 
             <div class="p-4">
                 <img src="{{ member.image }}" alt="{{ member.name }}"
-                    class="w-2/3 h-auto mx-auto block mb-2 rounded-md">
+                    class="w-2/3 h-80 object-cover mx-auto block mb-2 rounded-md">
                 <h2 class="text-lg font-bold dark:text-white text-center">{{ member.name }}</h2>
                 <p class="text-sm text-gray-600 dark:text-gray-300 text-center">{{ member.description }}</p>
                 <div class="flex justify-center mt-2">
