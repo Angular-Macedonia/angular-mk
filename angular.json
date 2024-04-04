@@ -14,7 +14,7 @@
           "options": {
             "configFile": "vite.config.ts",
             "main": "src/main.ts",
-            "outputPath": "dist/client",
+            "outputPath": "angular-mk/dist/client",
             "tsConfig": "tsconfig.app.json",
             "styles": [
               "node_modules/bootstrap-icons/font/bootstrap-icons.css"
@@ -50,6 +50,9 @@
         },
         "test": {
           "builder": "@analogjs/platform:vitest"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
