@@ -1,8 +1,6 @@
-import { ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgClass } from '@angular/common';
-
-
 
 @Component({
   selector: 'amk-banner',
@@ -16,6 +14,10 @@ export class BannerComponent implements OnInit {
 
   @ViewChild("typewrite1", {static: true, read: ElementRef}) heading1!: ElementRef;
   visible: boolean = false;
+
+  constructor(
+    private _crd: ChangeDetectorRef,
+  ) {}
 
     ngOnInit(): void {
       // @ts-ignore
@@ -43,7 +45,11 @@ export class BannerComponent implements OnInit {
                         '
                         >Angular</span> Meetup Community!</h2>`)
         .start();
+
+      setTimeout(() => {
         this.visible = true;
+        this._crd.detectChanges()
+      }, 150);
     }
 
 }

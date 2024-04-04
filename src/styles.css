@@ -1,5 +1,4 @@
 /* directives  */
-@import 'aos/dist/aos.css';
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 @tailwind base;
 @tailwind components;
