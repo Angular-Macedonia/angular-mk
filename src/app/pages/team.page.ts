@@ -8,9 +8,8 @@ import { TeamMembers } from '../../assets/data/team-members';
   standalone: true,
   imports: [NgFor, NgIf, RouterLink],
   template: `
-    <div id='team'>&nbsp;</div>
-   <div class="container mx-auto w-full h-full p-5 min-h-screen">
-    <h2 class="text-gray-900 text-center dark:text-white text-xl md:text-2xl font-bold">Meet the team</h2>
+   <div class="container mx-auto w-full h-full p-5 min-h-screen" id='team'>
+    <h2 class="text-gray-900 text-center dark:text-white text-xl md:text-2xl font-bold mt-24">Meet the team</h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
         @for(member of teamMembers; track member) {

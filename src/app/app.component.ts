@@ -47,11 +47,11 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     initFlowbite();
     fromEvent(document, 'scroll').pipe(
-      throttleTime(100),
+      throttleTime(150),
     ).subscribe({
       next: () => {
         const st = document.documentElement.scrollTop;
-        this.hidden = st > this.scrollTop;
+        this.hidden = st - 85 > this.scrollTop;
         this.scrollTop = st;
       }
     })
