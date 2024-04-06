@@ -26,6 +26,7 @@
     "@angular/platform-server": "^17.2.0",
     "@angular/router": "^17.2.0",
     "@nx/angular": "~18.0.0",
+    "@vercel/analytics": "^1.2.2",
     "bootstrap-icons": "^1.11.3",
     "flowbite": "^2.2.1",
     "front-matter": "^4.0.2",

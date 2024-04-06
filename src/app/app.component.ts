@@ -4,7 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { initFlowbite } from 'flowbite';
 import { fromEvent, throttleTime } from 'rxjs';
-
+import { inject } from "@vercel/analytics"
 
 @Component({
   selector: 'app-root',
@@ -46,6 +46,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     initFlowbite();
+    inject();
     fromEvent(document, 'scroll').pipe(
       throttleTime(150),
     ).subscribe({
