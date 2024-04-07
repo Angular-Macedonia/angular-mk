@@ -6,13 +6,15 @@ import { withInMemoryScrolling } from '@angular/router';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideClientHydration(),
     provideFileRouter(withInMemoryScrolling(
       {
         anchorScrolling: 'enabled',
         scrollPositionRestoration: 'enabled',
       }
     )),
+    
     provideHttpClient(withFetch()),
-    provideClientHydration(),
+   
   ],
 };

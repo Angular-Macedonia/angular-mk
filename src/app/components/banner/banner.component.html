@@ -3,8 +3,8 @@
     <section class="container py-5">
         <div class="flex items-center flex-col md:flex-row lg:justify-center md:justify-around">
 
-            <section class="lg:relative lg:transform lg:translate-x-[-4%] lg:translate-y-[8%] lg:scale-150">
-                <img src="/logo-mk.png" height="auto" width="auto" alt="logo" class="w-full h-1/2 max-w-96 logo-animate"
+            <section class="lg:relative lg:transform lg:translate-x-[-4%] lg:translate-y-[8%] lg:scale-150 relative">
+                <img [ngSrc]="'/logo-mk.webp'"  height="350" width="350" [priority]="false" alt="logo" class="h-46 max-w-96 logo-animate relative"
                 [ngClass]='{"logo-visible": visible, "logo-hidden": !visible}'>
             </section>
 

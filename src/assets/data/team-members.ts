@@ -3,8 +3,8 @@ import { TeamMember } from "src/app/models/team-member.interface";
 export const TeamMembers: TeamMember[] = [
     {
       name: 'Kiril Zafirov',
-      description: 'Angular Consultant & Front-End Specialist',
-      image: '/kiril.jpeg',
+      description: 'Frontend Engineer/Architect Passionate about Angular, Web Components, and Web Performance.',
+      image: '/kiril.webp',
       socialMedia: [
         {
           icon: 'bi bi-linkedin', url: 'https://www.linkedin.com/in/kiril-z/'
@@ -17,7 +17,7 @@ export const TeamMembers: TeamMember[] = [
     {
       name: 'Angel Petrushevski',
       description: 'Full-Stack Developer @ Sorsix, Angular Educator & Front-End Specialist',
-      image: '/angel.jpeg',
+      image: '/angel.webp',
       socialMedia: [
         {
           icon: 'bi bi-linkedin', url: 'https://www.linkedin.com/in/petrusevski/'
@@ -30,7 +30,7 @@ export const TeamMembers: TeamMember[] = [
     {
       name: 'Eva Conevski',
       description: 'Web Developer | Computer Science Graduate',
-      image: '/eva.jpeg',
+      image: '/eva.webp',
       socialMedia: [
         {
           icon: 'bi bi-linkedin', url: 'https://www.linkedin.com/in/eva-conevski-b212111a0/'

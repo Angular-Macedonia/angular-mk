@@ -15,8 +15,8 @@ import { injectSpeedInsights } from '@vercel/speed-insights';
     <amk-header [visible]='!hidden'/>
     <main #scroller>
       <router-outlet/>
-    </main>
-    <amk-footer/>
+    </main> 
+    <amk-footer/> 
   `,
   styles: [
     `
@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
   hidden = false;
 
   constructor(
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     initFlowbite();
