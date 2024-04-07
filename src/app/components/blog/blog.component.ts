@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BlogPost } from '../../models/blog-post.interface';
-import { BlogPosts } from '../../../assets/data/blogs';
+import { BlogPosts } from '../../../../data/blogs';
 
 @Component({
   selector: 'amk-blog',

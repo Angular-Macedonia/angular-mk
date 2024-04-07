@@ -1,4 +1,4 @@
-import { Collaborator } from '../../app/models/collaborator.interface';
+import { Collaborator } from '../src/app/models/collaborator.interface';
 
 export const Collaborators: Collaborator[] = [
   {

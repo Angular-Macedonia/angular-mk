@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TeamMember } from '../models/team-member.interface';
-import { TeamMembers } from '../../assets/data/team-members';
-import { Collaborators } from '../../assets/data/collaborators';
+import { TeamMembers } from '../../../data/team-members';
+import { Collaborators } from '../../../data/collaborators';
 import { Collaborator } from '../models/collaborator.interface';
 import { NgOptimizedImage } from '@angular/common';
 
@@ -18,7 +18,7 @@ import { NgOptimizedImage } from '@angular/common';
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
 
             <div class="p-4">
-                <img [ngSrc]="member.image" alt="{{ member.name }}" [priority]="false"  
+                <img [ngSrc]="member.image" alt="{{ member.name }}" [priority]="member.priority"  [height]="member.height" [width]="member.width"
                     class="w-2/3 h-80 object-cover mx-auto block mb-2 rounded-md">
                 <h2 class="text-lg font-bold dark:text-white text-center">{{ member.name }}</h2>
                 <p class="text-sm text-gray-600 dark:text-gray-300 text-center">{{ member.description }}</p>
@@ -41,7 +41,7 @@ import { NgOptimizedImage } from '@angular/common';
        @for(member of collaborators; track member) {
          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden w-96">
            <div class="p-4">
-             <img  [ngSrc]="member.image" alt="{{ member.name }}" [priority]="false"  
+             <img  [ngSrc]="member.image" alt="{{ member.name }}" [priority]="false"  height="907" width="600"
                   class="w-2/3 h-80 object-cover mx-auto block mb-2 rounded-md">
              <h2 class="text-lg font-bold dark:text-white text-center">{{ member.name }}</h2>
              <p class="text-sm text-gray-600 dark:text-gray-300 text-center">{{ member.description }}</p>
