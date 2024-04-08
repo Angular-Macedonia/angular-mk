@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {   ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'amk-about',
@@ -49,7 +49,8 @@ import { Component } from '@angular/core';
         transform: translateX(0);
       }
     }
-  `
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutComponent {
 

@@ -1,17 +1,19 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { NgClass, NgOptimizedImage } from '@angular/common';
 import { ThemeService } from '../../services/theme.service';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'amk-header',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink, RouterLinkActive],
-  providers: [ThemeService],
+  imports: [FormsModule, RouterLink, RouterLinkActive, NgClass, NgOptimizedImage], 
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [
+    ThemeService, 
+  ],
 })
 export class HeaderComponent implements OnInit {
   isDarkTheme: boolean = false;
@@ -22,7 +24,6 @@ export class HeaderComponent implements OnInit {
     { path: '/team', label: 'Team' }
   ];
   @Input() visible = false;
-
   constructor(private themeService: ThemeService) { }
   ngOnInit(): void {
     //set theme

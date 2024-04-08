@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TeamMember } from '../models/team-member.interface';
-import { TeamMembers } from '../../assets/data/team-members';
-import { Collaborators } from '../../assets/data/collaborators';
+import { TeamMembers } from '../../../data/team-members';
+import { Collaborators } from '../../../data/collaborators';
 import { Collaborator } from '../models/collaborator.interface';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   standalone: true,
-  imports: [NgFor, NgIf, RouterLink],
+  imports: [RouterLink, NgOptimizedImage], 
   template: `
    <div class="container mx-auto w-full h-full p-5 min-h-screen" id='team'>
     <h2 class="text-gray-900 text-center dark:text-white text-xl md:text-2xl font-bold mt-20">Meet the team</h2>
@@ -18,7 +18,7 @@ import { Collaborator } from '../models/collaborator.interface';
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
 
             <div class="p-4">
-                <img src="{{ member.image }}" alt="{{ member.name }}"
+                <img [ngSrc]="member.image" alt="{{ member.name }}" [priority]="member.priority"  [height]="member.height" [width]="member.width"
                     class="w-2/3 h-80 object-cover mx-auto block mb-2 rounded-md">
                 <h2 class="text-lg font-bold dark:text-white text-center">{{ member.name }}</h2>
                 <p class="text-sm text-gray-600 dark:text-gray-300 text-center">{{ member.description }}</p>
@@ -41,7 +41,7 @@ import { Collaborator } from '../models/collaborator.interface';
        @for(member of collaborators; track member) {
          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden w-96">
            <div class="p-4">
-             <img src="{{ member.image }}" alt="{{ member.name }}"
+             <img  [ngSrc]="member.image" alt="{{ member.name }}" [priority]="false"  height="907" width="600"
                   class="w-2/3 h-80 object-cover mx-auto block mb-2 rounded-md">
              <h2 class="text-lg font-bold dark:text-white text-center">{{ member.name }}</h2>
              <p class="text-sm text-gray-600 dark:text-gray-300 text-center">{{ member.description }}</p>
@@ -65,6 +65,6 @@ import { Collaborator } from '../models/collaborator.interface';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class TeamPage {
-  readonly teamMembers: TeamMember[] = TeamMembers;
-  collaborators: Collaborator[] = Collaborators
+  public readonly teamMembers: TeamMember[] = TeamMembers;
+  public readonly collaborators: Collaborator[] = Collaborators
 }

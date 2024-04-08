@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
   hidden = false;
 
   constructor(
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     initFlowbite();
@@ -54,7 +54,11 @@ export class AppComponent implements OnInit {
     ).subscribe({
       next: () => {
         const st = document.documentElement.scrollTop;
-        this.hidden = st - 85 > this.scrollTop;
+        if (st > this.scrollTop + 85) {
+          this.hidden = true; 
+        } else if (st < this.scrollTop - 85) {
+          this.hidden = false;
+        }
         this.scrollTop = st;
       }
     })

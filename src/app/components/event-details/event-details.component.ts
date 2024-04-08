@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { PastEvents } from '../../../assets/data/past-events';
+import { PastEvents } from '../../../../data/past-events';
 import { Event } from "src/app/models/event.interface";
 import { CountdownComponent } from '../countdown/countdown.component';
 
