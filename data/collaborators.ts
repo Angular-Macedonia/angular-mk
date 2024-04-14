@@ -9,6 +9,9 @@ export const Collaborators: Collaborator[] = [
       {
         icon: 'bi bi-linkedin', url: 'https://www.linkedin.com/in/marina-klimoska/'
       },
+      {
+        icon: 'bi-link', url: 'https://www.playbook.com/s/marina-klimoska/marina-klimoska-s-design-portfolio'
+      }
     ]
   },
 ];
