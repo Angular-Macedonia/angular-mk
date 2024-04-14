@@ -2,11 +2,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { PastEvents } from '../../../../data/past-events';
 import { Event } from "src/app/models/event.interface";
 import { CountdownComponent } from '../countdown/countdown.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'amk-event-details',
   standalone: true,
-  imports: [CountdownComponent],
+  imports: [CountdownComponent, NgOptimizedImage],
   templateUrl: './event-details.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

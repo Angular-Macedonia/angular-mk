@@ -1,10 +1,11 @@
 <!--Add for future evenets-->
- 
 
-<div class="bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white p-5" data-aos='zoom-in' >
+
+<div class="bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white p-5" data-aos='zoom-in'>
     <div class="container mx-auto text-center">
         <h2 class="text-2xl md:text-3xl font-bold mb-4">Angular Mastery Bootcamp</h2>
-        <p class="lg:text-lg md:text-lg text-md text-justify">Join us at <a href="https://maps.app.goo.gl/hfznohdv1z15YyTJ8" target="_blank"
+        <p class="lg:text-lg md:text-lg text-md text-justify">Join us at <a
+                href="https://maps.app.goo.gl/hfznohdv1z15YyTJ8" target="_blank"
                 class="underline hover:text-red-700 dark:hover:text-amber-500">Base 42</a> for an intensive Angular
             Mastery Bootcamp designed to elevate your skills
             to the next level, taking place on 17-19 May. Dive deep into Angular fundamentals, advanced techniques, and
@@ -13,7 +14,7 @@
             equip you with the knowledge and expertise needed to build robust, scalable Angular applications. Don't miss
             this opportunity to accelerate your career and become an Angular expert!</p>
         <app-countdown />
- 
+
       <div >
         <hr>
         <p class='text-lg italic'>More information to come soon! 📅</p>
@@ -23,16 +24,95 @@
     </div>
 </div>
 
+<div class="container mx-auto w-full p-5 ">
+    <h2 class="text-gray-900 text-center dark:text-white text-2xl md:text-3xl font-bold mb-4">Upcoming Event</h2>
+    <p class="md:text-lg text-md text-center dark:text-white">Thu, Apr 25, 2024, 6:00 - 8:00 PM CET</p>
+    <p class="md:text-lg text-md text-center dark:text-white">
+        Join us at
+        <a href="https://maps.app.goo.gl/hfznohdv1z15YyTJ8" target="_blank"
+            class="underline hover:text-red-700 dark:hover:text-amber-500">Base 42</a>
+        or <a href="https://meet.google.com/kbe-vyvd-rjg" target="_blank"
+            class="underline hover:text-red-700 dark:hover:text-amber-500">online</a>
+    </p>
+
+    <div class="flex flex-col md:flex-row md:mt-2 mt-8 items-center">
+        <section class="flex-2 relative" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
+            <div class="absolute w-80 h-80 bg-red-500 dark:bg-amber-500 rounded-full"></div>
+            <img [ngSrc]="'/santosh.webp'" height="80" width="80" [priority]="false" alt="speaker"
+                class="w-80 h-80 rounded-full transform translate-x-3 -translate-y-5">
+        </section>
+
+        <section data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000"
+            class="flex-1 p-8 text-center relative flex flex-col justify-between items-end dark:text-white">
+
+            <div class="w-12 h-12 rounded-full self-end m-4"
+                style="background-image: linear-gradient(to right, #ef4444, #fb923c, #f6e05e);">
+            </div>
+
+            <div>
+                <hr>
+                <h2 class="md:text-lg text-md font-bold">Improve your team productivity by choosing Nx</h2>
+                <p class="md:text-md text-sm text-gray-600 dark:text-gray-300 px-4 mt-2">
+                    Don't miss <span class="text-red-700 dark:text-amber-500">Santosh
+                        Yadav</span>, a Google Developer Expert for Angular, as he
+                    explores how adopting Nx can significantly enhance your team's productivity. Discover practical
+                    insights
+                    and strategies to optimize your development workflows and maximize efficiency using Nx.
+                </p>
+                <hr>
+            </div>
+
+            <div class="w-20 h-20 rounded-full self-start m-4"
+                style="background-image: linear-gradient(to left, #ef4444, #fb923c, #f6e05e);">
+            </div>
+        </section>
+
+    </div>
+
+    <h2 class="text-red-500 dark:text-amber-500 text-center text-6xl md:text-7xl font-bold">&</h2>
+
+    <div class="flex flex-col md:flex-row-reverse md:mt-2 mt-8 items-center">
+        <section class="flex-2 relative" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
+            <div class="absolute w-80 h-80 bg-red-500 dark:bg-amber-500 rounded-full"></div>
+            <img [ngSrc]="'/santosh.webp'" height="80" width="80" [priority]="false" alt="speaker"
+                class="w-80 h-80 rounded-full transform translate-x-3 -translate-y-5">
+        </section>
+
+        <section data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000"
+            class="flex-1 p-8 text-center relative flex flex-col justify-between items-end dark:text-white">
+
+            <div class="w-12 h-12 rounded-full self-end m-4"
+                style="background-image: linear-gradient(to right, #ef4444, #fb923c, #f6e05e);">
+            </div>
+
+            <div>
+                <hr>
+                <h2 class="md:text-lg text-md font-bold">Build an AI application with full stack Angular & Cloudflare
+                </h2>
+                <p class="md:text-md text-sm text-gray-600 dark:text-gray-300 px-4 mt-2">
+                    And <span class="text-red-700 dark:text-amber-500">Dale Nguyen
+                    </span>, Senior Frontend Engineer at Noibu and Author, as he shares expert tips and innovative
+                    strategies on leveraging full-stack Angular and Cloudflare to successfully build, deploy, and
+                    optimize AI applications.
+                </p>
+                <hr>
+            </div>
+
+            <div class="w-20 h-20 rounded-full self-start m-4"
+                style="background-image: linear-gradient(to left, #ef4444, #fb923c, #f6e05e);">
+            </div>
+        </section>
+
+    </div>
+</div>
+
 <div class="container mx-auto w-full p-5">
-    <h2 class="text-gray-900 text-center dark:text-white text-xl md:text-2xl font-bold">Past Events</h2>
+    <h2 class="text-gray-900 text-center dark:text-white text-2xl md:text-3xl font-bold">Past Events</h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
         @for(event of visibleEvents; track event) {
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
-             data-aos="zoom-in"
-             data-aos-delay="50"
-             data-aos-duration="1000"
-        >
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden" data-aos="zoom-in"
+            data-aos-delay="50" data-aos-duration="1000">
 
             <div class="p-4 ">
                 <h2 class="text-lg font-bold dark:text-white">
