@@ -12,6 +12,7 @@ import { NgOptimizedImage } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EventDetailsComponent {
+
   pastEvents: Event[] = PastEvents;
   showLimit: number = 6;
 
