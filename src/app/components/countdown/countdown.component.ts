@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AsyncPipe, NgIf } from '@angular/common';
-import {  Observable, interval, map  } from 'rxjs';
+import { Observable, interval, map, throttleTime } from 'rxjs';
 export interface CountDownModel {
   days: number;
   hours: number;
@@ -16,12 +16,13 @@ export interface CountDownModel {
 })
 export class CountdownComponent {
   countdownDate: Date = new Date('2024-05-17T18:00:00');
- 
-  countdown$: Observable<CountDownModel> = interval(1000).pipe(
+
+  countdown$: Observable<CountDownModel> = interval().pipe(
+    throttleTime(1000),
     map( _ => {
       const now = new Date().getTime();
       const distance = this.countdownDate.getTime() - now;
-   
+
       return distance >= 0 ? {
         days: Math.max(Math.floor(distance / (1000 * 60 * 60 * 24)), 0),
         hours: Math.max(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)), 0),
