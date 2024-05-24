@@ -14,8 +14,8 @@ import { AboutComponent } from "../components/about/about.component";
   ],
   template: `
     <amk-banner/>
-    <amk-event-details id='events'/>
     <amk-about id='about'/>
+    <amk-event-details id='events'/>
     <!-- <amk-blog id='blog'/> -->
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
