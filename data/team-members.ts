@@ -35,7 +35,7 @@ export const TeamMembers: TeamMember[] = [
     },
     {
       name: 'Eva Conevski',
-      description: 'Web Developer | Computer Science Graduate',
+      description: 'Frontend Developer @ N47 | Angular Advocate',
       image: '/eva.webp',
       priority: false,
       height: 460,
