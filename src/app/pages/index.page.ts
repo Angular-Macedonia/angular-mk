@@ -10,12 +10,12 @@ import { AboutComponent } from "../components/about/about.component";
     BannerComponent,
     AboutComponent,
     EventDetailsComponent,
-    BlogComponent
+    BlogComponent, 
   ],
   template: `
     <amk-banner/>
     <amk-about id='about'/>
-    <amk-event-details id='events'/>
+    <amk-event-details id='events'/> 
     <!-- <amk-blog id='blog'/> -->
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,

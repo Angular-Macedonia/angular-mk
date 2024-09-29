@@ -21,7 +21,8 @@ export class HeaderComponent implements OnInit {
     { path: '.', label: 'About', },
     { path: '.', label: 'Events' },
     // { path: '.', label: 'Blog' },
-    { path: '/team', label: 'Team' }
+    { path: '/team', label: 'Team' },
+    { path: '/positions', label: 'Positions' }
   ];
   @Input() visible = false;
   constructor(private themeService: ThemeService) { }
