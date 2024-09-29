@@ -8,6 +8,7 @@ import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   standalone: true,
+  selector: 'amk-team',
   imports: [RouterLink, NgOptimizedImage], 
   template: `
    <div class="container mx-auto w-full h-full p-5 min-h-screen" id='team'>
@@ -36,7 +37,8 @@ import { NgOptimizedImage } from '@angular/common';
         </div>
         }
     </div>
-     <h2 class="text-gray-900 text-center dark:text-white text-xl md:text-2xl font-bold mt-16">Collaborators</h2>
+    @if(collaborators.length > 0) {
+      <h2 class="text-gray-900 text-center dark:text-white text-xl md:text-2xl font-bold mt-16">Collaborators</h2>
      <div class="flex justify-center content-center gap-4 columns-3 mt-4">
        @for(member of collaborators; track member) {
          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden w-96">
@@ -59,6 +61,8 @@ import { NgOptimizedImage } from '@angular/common';
          </div>
        }
      </div>
+    }
+   
 
      </div>
   `,

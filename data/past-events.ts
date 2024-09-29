@@ -2,6 +2,12 @@ import { Event } from "src/app/models/event.interface";
 
 export const PastEvents: Event[] = [
   {
+    title: 'Angular Testing Strategies / From Patchwork to Picasso:Refactoring 150+ web projects and what went wrong 🚨',
+    description: 'During the event, Mateusz Stefańczyk, Angular Developer working with House of Angular, ensuring the reliability and performance of your Angular applications is crucial.Muhammad Ahsan Ayaz , Google Developers Expert in Angular and a book author, showcased practical strategies for taming even the most monstrous codebases.We discovered powerful techniques to streamline our workflow, enforce consistent layouts and styles, and automate repetitive tasks ',
+    date: 'Wed, September 25-th, 2024, 6:00 PM CET',
+    link: 'https://www.meetup.com/angular-macedonia/events/303545710/'
+  },
+  {
     title: 'Improve your team productivity by choosing Nx / Build an AI application with full stack Angular & Cloudflare',
     description: 'During the event, Santosh Yadav, a Google Developer Expert for Angular, showcased how Nx can significantly enhance team productivity by optimizing development workflows within Angular projects. Dale Nguyen, Senior Frontend Engineer at Noibu, provided expert strategies for leveraging Angular and Cloudflare to effectively build and optimize AI applications. The event highlighted the importance of adopting modern tools and methodologies to streamline development processes and achieve better outcomes.',
     date: 'Thu, Apr 25, 2024, 6:00 PM CET',
