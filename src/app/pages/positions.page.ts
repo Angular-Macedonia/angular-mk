@@ -11,9 +11,9 @@ import { CompanyInformation } from '../models/company-information.model';
    <div class="container mx-auto w-full h-full p-5 min-h-screen" id='positions' >
     <h2 class="text-gray-900 text-center dark:text-white text-xl md:text-2xl font-bold mt-20">Open positions at companies that support Angular Macedonia</h2>
     @for(offer of jobOffers; track offer) {
-      <h1 class="text-lg font-bold">{{ offer.name }}</h1>
+      <h1 class="text-xl font-bold  dark:text-white m-4">{{ offer.name }}</h1>
 
-      <div> 
+      <div class=" dark:text-white"> 
         {{ offer.description }}
       </div>
 
@@ -22,28 +22,28 @@ import { CompanyInformation } from '../models/company-information.model';
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
 
               <div class="p-4"> 
-                  <h2 class="text-lg font-bold dark:text-white text-center">{{ position.title }}</h2>
-                  <p class="text-sm text-gray-600 dark:text-gray-300 text-center">{{ position.description }}</p>
-                  <div class="flex flex-col justify-start mt-2">
+                  <h2 class="text-lg font-bold dark:text-white text-center my-4">{{ position.title }}</h2>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">{{ position.description }}</p>
+                  <div class="flex flex-col justify-start mt-2 py-4">
                       <h4 class="font-bold dark:text-white"> Responsibilities: </h4>
-                      <ul>
+                      <ul class=" dark:text-white">
                           @for(responsibility of position.responsibilities; track responsibility) {
                           <li>{{ responsibility }}</li>
                           }
                       </ul> 
                   </div>
-                  <div class="flex flex-col justify-start mt-2"> 
+                  <div class="flex flex-col justify-start mt-2 py-4"> 
                       <h4 class="font-bold dark:text-white"> Qualifications: </h4>
-                      <ul>
+                      <ul class=" dark:text-white">
                           @for(qualification of position.qualifications; track qualification) {
                           <li>{{ qualification }}</li>
                           }
                       </ul> 
                   </div>
                   @if(position.niceToHave.length > 0) {
-                    <div class="flex flex-col justify-start mt-2"> 
+                    <div class="flex flex-col justify-start mt-2 py-4"> 
                       <h4 class="font-bold dark:text-white"> Nice to have: </h4>
-                      <ul>
+                      <ul class=" dark:text-white">
                           @for(have of position.niceToHave; track have) {
                           <li>{{ have }}</li>
                           }
