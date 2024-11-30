@@ -5,12 +5,14 @@ import { TeamMembers } from '../../../data/team-members';
 import { Collaborators } from '../../../data/collaborators';
 import { Collaborator } from '../models/collaborator.interface';
 import { NgOptimizedImage } from '@angular/common';
+import { HeaderComponent } from '../components/header/header.component';
 
 @Component({
   standalone: true,
   selector: 'amk-team',
-  imports: [RouterLink, NgOptimizedImage], 
+  imports: [RouterLink, NgOptimizedImage, HeaderComponent],
   template: `
+    <amk-header [visible]='true'/>
    <div class="container mx-auto w-full h-full p-5 min-h-screen" id='team'>
     <h2 class="text-gray-900 text-center dark:text-white text-xl md:text-2xl font-bold mt-20">Meet the team</h2>
 
@@ -62,7 +64,7 @@ import { NgOptimizedImage } from '@angular/common';
        }
      </div>
     }
-   
+
 
      </div>
   `,

@@ -1,0 +1,127 @@
+<div class='context'>
+
+  <div class='info' #context>
+
+    <div class='part flex items-center justify-center'>
+      <h1 class='text-3xl sm:text-5xl font-extrabold drop-shadow-lg animate-bounce text-center text-white'>
+        You’re Invited to Celebrate with Us!
+      </h1>
+    </div>
+
+    <div class='part flex flex-col items-center justify-center text-center'>
+      <h1 class='text-3xl sm:text-4xl font-bold mb-2 uppercase tracking-widest text-white'>WHAT?</h1>
+      <h1 class='text-3xl sm:text-5xl font-extrabold text-white'>1 Year of Angular Macedonia</h1>
+    </div>
+
+    <div class='part flex flex-col items-center justify-center text-center'>
+      <h1 class='flex gap-4 text-3xl sm:text-4xl font-bold mb-2 uppercase tracking-widest text-white'>
+        <svg xmlns='http://www.w3.org/2000/svg' class='h-8 sm:h-10 w-8 sm:w-10 text-white' viewBox='0 0 24 24'
+             fill='currentColor'>
+          <path
+            d='M7 4V2H9V4H15V2H17V4H19C20.103 4 21 4.897 21 6V20C21 21.103 20.103 22 19 22H5C3.897 22 3 21.103 3 20V6C3 4.897 3.897 4 5 4H7ZM5 9V20H19V9H5ZM5 6V7H19V6H17V8H15V6H9V8H7V6H5Z'></path>
+        </svg>
+        WHEN?
+      </h1>
+      <div class='flex items-center gap-4 mt-2'>
+        <div>
+          <h1 class='text-3xl sm:text-4xl font-extrabold text-white'>16th December</h1>
+          <h1 class='text-3xl sm:text-4xl font-extrabold mt-2 text-white'>6:00 PM</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class='part flex flex-col items-center justify-center text-center'>
+      <h1 class='flex gap-4 text-3xl sm:text-4xl font-bold mb-2 uppercase tracking-widest text-white'>
+        <svg xmlns='http://www.w3.org/2000/svg' class='h-8 sm:h-10 w-8 sm:w-10 text-white' viewBox='0 0 24 24'
+             fill='currentColor'>
+          <path
+            d='M12 2C8.686 2 6 4.686 6 8C6 11.978 12 22 12 22C12 22 18 11.978 18 8C18 4.686 15.314 2 12 2ZM12 11C10.897 11 10 10.103 10 9C10 7.897 10.897 7 12 7C13.103 7 14 7.897 14 9C14 10.103 13.103 11 12 11Z'></path>
+        </svg>
+        WHERE?
+      </h1>
+      <div class='flex items-center gap-4 mt-2'>
+        <a href='https://base42.mk/' target='_blank'>
+          <img width='240px' height='250px' src='/base.svg' class='rounded-lg'/>
+        </a>
+      </div>
+    </div>
+
+    <div class='part flex flex-col items-center justify-center text-center'>
+      <h1 class='text-3xl sm:text-4xl font-bold mb-2 uppercase tracking-widest text-white'>WHY?</h1>
+      <p class='text-2xl sm:text-3xl font-medium px-6 sm:px-12 leading-relaxed text-white max-w-[600px]'>
+        Because we’ve built a community where learning, unity, and innovation thrive.
+        Let’s celebrate <span class='font-semibold'>together</span>!
+      </p>
+    </div>
+
+    <div class='part flex flex-col items-center justify-center text-center'>
+      <h1 class='text-3xl sm:text-4xl font-bold mb-4 uppercase tracking-widest text-white'>What to Expect?</h1>
+      <p class='text-2xl sm:text-2xl font-medium px-6 sm:px-12 leading-relaxed text-white'>
+        Good vibes, interesting talks, DJ 🎶, pizza 🍕, beer 🍺, and unforgettable fun.
+      </p>
+    </div>
+
+    <div class='part flex flex-col items-center justify-center text-center py-12 px-4'>
+      <h1 class='text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 uppercase tracking-widest text-white'>Agenda</h1>
+      <div class='space-y-4 max-w-4xl w-full'>
+        <!-- Welcome & Opening -->
+        <div class='bg-gray-800/60 p-6 rounded-lg shadow-xl transition-all hover:bg-gray-800'>
+          <p class='text-lg sm:text-xl font-semibold text-white'>🕕 6:00 PM</p>
+          <p class='text-base sm:text-lg text-white'>Welcome & Opening</p>
+        </div>
+        <!-- Talks -->
+        <div class='bg-gray-800/60 p-6 rounded-lg shadow-xl transition-all hover:bg-gray-800'>
+          <p class='text-lg sm:text-xl font-semibold text-white'>🌟 6:15 PM</p>
+          <p class='text-base sm:text-lg text-white'>Tomasz Ducin - Talk</p>
+          <p class='text-base sm:text-lg text-white'>Kiril Zafirov - Lightning Talk</p>
+          <p class='text-base sm:text-lg text-white'>Angel Petrushevski - Lightning Talk</p>
+        </div>
+        <!-- Founders’ Highlights -->
+        <div class='bg-gray-800/60 p-6 rounded-lg shadow-xl transition-all hover:bg-gray-800'>
+          <p class='text-lg sm:text-xl font-semibold text-white'>🔥 7:30 PM</p>
+          <p class='text-base sm:text-lg text-white'>Founders’ Highlights + 2025 Roadmap</p>
+        </div>
+        <!-- DJ Party & Networking -->
+        <div class='bg-gray-800/60 p-6 rounded-lg shadow-xl transition-all hover:bg-gray-800'>
+          <p class='text-lg sm:text-xl font-semibold text-white'>🎶 7:45 PM</p>
+          <p class='text-base sm:text-lg text-white'>DJ Party, Networking, Beer & Pizza</p>
+        </div>
+      </div>
+    </div>
+
+    @if (scrollIndicatorVisible()) {
+      <div id='sd-container'>
+        <div class='arrow'></div>
+        <div class='arrow'></div>
+      </div>
+    }
+
+    <div style='padding: 24px !important;' class='flex items-center flex-col justify-center p-10 space-x-4'>
+      <p style='padding-bottom: 10px !important;' class='text-white text-center'>For more details on the event follow us on social media:</p>
+      <div class='flex gap-2'>
+        @for (link of socialMediaLinks; track link.name) {
+          <a [href]='link.url' target='_blank'
+             class='text-white hover:text-black flex items-center justify-center border border-white hover:border-red-700 rounded-full w-10 h-10 hover-shake'>
+            <i [class]="link.icon + ' text-xl'"></i>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class='area'>
+    <ul class='circles'>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</div>
+

@@ -7,19 +7,19 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'amk-header',
   standalone: true,
-  imports: [FormsModule, RouterLink, RouterLinkActive, NgClass, NgOptimizedImage], 
+  imports: [FormsModule, RouterLink, RouterLinkActive, NgClass, NgOptimizedImage],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
-    ThemeService, 
+    ThemeService,
   ],
 })
 export class HeaderComponent implements OnInit {
   isDarkTheme: boolean = false;
   navigationItems = [
-    { path: '.', label: 'About', },
-    { path: '.', label: 'Events' },
+    { path: '/', label: 'About', },
+    { path: '/', label: 'Events' },
     // { path: '.', label: 'Blog' },
     { path: '/team', label: 'Team' },
     { path: '/positions', label: 'Positions' }
