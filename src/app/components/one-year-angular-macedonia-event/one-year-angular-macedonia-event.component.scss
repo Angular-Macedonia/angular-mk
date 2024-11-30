@@ -161,14 +161,9 @@
   align-items: center;
   justify-content: center;
   position: relative;
-
-  & #scroll-down {
-    position: absolute;
-    bottom: 10%;
-  }
 }
 
-.part > * {
+.part > *:not(.animate-bounce) {
   animation: revealing;
   animation-timeline: view(block);
   animation-range: cover 0% cover 50%;

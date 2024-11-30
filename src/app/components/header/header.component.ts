@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgClass, NgOptimizedImage } from '@angular/common';
 import { ThemeService } from '../../services/theme.service';
@@ -10,10 +10,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   imports: [FormsModule, RouterLink, RouterLinkActive, NgClass, NgOptimizedImage],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     ThemeService,
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit {
   isDarkTheme: boolean = false;
@@ -24,7 +24,10 @@ export class HeaderComponent implements OnInit {
     { path: '/team', label: 'Team' },
     { path: '/positions', label: 'Positions' }
   ];
-  @Input() visible = false;
+
+  visible = input<boolean>(true);
+  toggleNav = signal(false);
+
   constructor(private themeService: ThemeService) { }
   ngOnInit(): void {
     //set theme

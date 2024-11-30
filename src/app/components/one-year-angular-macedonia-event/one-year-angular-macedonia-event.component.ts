@@ -1,12 +1,10 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, signal, ViewChild } from '@angular/core';
-import { EventGalleryPreviewComponent } from '../event-gallery-preview/event-gallery-preview.component';
 import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'one-year-angular-mk',
   standalone: true,
   imports: [
-    EventGalleryPreviewComponent,
     FooterComponent
   ],
   templateUrl: './one-year-angular-macedonia-event.component.html',
