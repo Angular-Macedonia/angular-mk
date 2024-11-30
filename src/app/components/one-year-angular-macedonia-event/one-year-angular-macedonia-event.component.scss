@@ -268,3 +268,18 @@
     opacity: 1;
   }
 }
+
+.logo {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    width: 100px;
+  }
+}
