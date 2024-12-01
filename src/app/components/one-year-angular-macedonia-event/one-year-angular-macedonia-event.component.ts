@@ -29,6 +29,18 @@ export class OneYearAngularMacedoniaEvent implements AfterViewInit {
     const container = this.scrollContainer.nativeElement;
     container.addEventListener('scroll', this.onScroll.bind(this));
     this.checkScrollVisibility();
+
+    for (let i = 0; i < 6; i++) {
+      const element = document.querySelector(`.observe-${i}`)!!;
+      this.observe(element);
+    }
+  }
+
+  observe(element: Element) {
+    const observer = new IntersectionObserver(entries => {
+      element?.classList.toggle('fly-in-blurred', entries[0].isIntersecting);
+    });
+    observer.observe(element);
   }
 
   onScroll(): void {
