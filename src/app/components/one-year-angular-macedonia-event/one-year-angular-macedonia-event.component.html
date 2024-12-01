@@ -1,22 +1,22 @@
 <div class='context'>
   <div class='info' #context>
 
-    <img class='logo' src='/logo.webp' alt=''>
+    <img class='logo' src='/logo.webp' alt='angular-macedonia-logo'>
 
-    <div class='part flex items-center justify-center'>
+    <div class='part scroll-section flex items-center justify-center'>
       <h1 class='text-3xl sm:text-5xl font-extrabold drop-shadow-lg animate-bounce text-center text-white'>
         You’re Invited to Celebrate with Us!
       </h1>
     </div>
 
-    <div class='part flex flex-col items-center justify-center text-center'>
-      <div class='observe-0'>
+    <div class='part scroll-section'>
+      <div class='observe-0 flex flex-col items-center justify-center text-center'>
         <h1 class='text-3xl sm:text-4xl font-bold mb-2 uppercase tracking-widest text-white'>WHAT?</h1>
         <h1 class='text-3xl sm:text-5xl font-extrabold text-white'>1 Year of Angular Macedonia</h1>
       </div>
     </div>
 
-    <div class='part'>
+    <div class='part scroll-section'>
       <div class='observe-1 flex flex-col items-center justify-center text-center'>
         <h1 class='flex gap-4 text-3xl sm:text-4xl font-bold mb-2 uppercase tracking-widest text-white '>
           <svg xmlns='http://www.w3.org/2000/svg' class='h-8 sm:h-10 w-8 sm:w-10 text-white' viewBox='0 0 24 24'
@@ -35,7 +35,7 @@
       </div>
     </div>
 
-    <div class='part'>
+    <div class='part scroll-section'>
       <div class='observe-2 flex flex-col items-center justify-center text-center'>
         <h1 class='flex gap-4 text-3xl sm:text-4xl font-bold mb-2 uppercase tracking-widest text-white'>
           <svg xmlns='http://www.w3.org/2000/svg' class='h-8 sm:h-10 w-8 sm:w-10 text-white' viewBox='0 0 24 24'
@@ -53,7 +53,7 @@
       </div>
     </div>
 
-    <div class='part'>
+    <div class='part scroll-section'>
       <div class='observe-3 flex flex-col items-center justify-center text-center'>
         <h1 class='text-3xl sm:text-4xl font-bold mb-2 uppercase tracking-widest text-white'>WHY?</h1>
         <p class='text-2xl sm:text-3xl font-medium px-6 sm:px-12 leading-relaxed text-white max-w-[600px]'>
@@ -63,19 +63,18 @@
       </div>
     </div>
 
-    <div class='part'>
+    <div class='part scroll-section'>
       <div class='observe-4 flex flex-col items-center justify-center text-center'>
-        <h1 class='text-3xl sm:text-4xl font-bold mb-4 uppercase tracking-widest text-white'>What to Expect?</h1>
+        <h1 class='text-3xl sm:text-4xl font-bold mb-2 uppercase tracking-widest text-white'>What to Expect?</h1>
         <p class='text-2xl sm:text-2xl font-medium px-6 sm:px-12 leading-relaxed text-white max-w-[600px]'>
           Good vibes, interesting talks, DJ 🎶, pizza 🍕, beer 🍺, and unforgettable fun.
         </p>
       </div>
     </div>
 
-    <div class='part'>
+    <div class='part scroll-section'>
       <div class='observe-5 flex flex-col items-center justify-center text-center py-12 px-4'>
-        <h1 style='padding-bottom: 14px'
-            class='text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 uppercase tracking-widest text-white'>
+        <h1 class='text-3xl sm:text-4xl md:text-5xl font-extrabold mb-3 uppercase tracking-widest text-white'>
           Agenda</h1>
         <div class='space-y-4'>
           <!-- Welcome & Opening -->
@@ -92,27 +91,20 @@
           </div>
           <!-- Founders’ Highlights -->
           <div class='bg-gray-800/60 p-2 rounded-lg shadow-xl transition-all hover:bg-gray-800'>
-            <p class='text-lg sm:text-xl font-semibold text-white'>🔥 7:30 PM</p>
+            <p class='text-lg sm:text-xl font-semibold text-white'>🔥 7:15 PM</p>
             <p class='text-base sm:text-lg text-white'>Founders’ Highlights + 2025 Roadmap</p>
           </div>
           <!-- DJ Party & Networking -->
           <div class='bg-gray-800/60 p-2 rounded-lg shadow-xl transition-all hover:bg-gray-800'>
-            <p class='text-lg sm:text-xl font-semibold text-white'>🎶 7:45 PM</p>
+            <p class='text-lg sm:text-xl font-semibold text-white'>🎶 7:30 PM</p>
             <p class='text-base sm:text-lg text-white'>DJ Party, Networking, Beer & Pizza</p>
           </div>
         </div>
       </div>
     </div>
 
-    @if (scrollIndicatorVisible()) {
-      <div id='sd-container'>
-        <div class='arrow'></div>
-        <div class='arrow'></div>
-      </div>
-    }
-
-    <div style='padding: 24px !important;' class='flex items-center flex-col justify-center p-10 space-x-4'>
-      <p style='padding-bottom: 10px !important;' class='text-white text-center'>For more details on the event follow us
+    <div class='flex scroll-section items-center flex-col justify-center p-10 space-x-4'>
+      <p class='text-white text-center pb-3'>For more details on the event follow us
         on social media:</p>
       <div class='flex gap-2'>
         @for (link of socialMediaLinks; track link.name) {
@@ -123,6 +115,13 @@
         }
       </div>
     </div>
+
+    @if (scrollIndicatorVisible()) {
+      <div id='sd-container'>
+        <div class='arrow'></div>
+        <div class='arrow'></div>
+      </div>
+    }
   </div>
 
   <div class='area'>
