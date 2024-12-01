@@ -38,7 +38,9 @@ export class OneYearAngularMacedoniaEvent implements AfterViewInit {
 
   observe(element: Element) {
     const observer = new IntersectionObserver(entries => {
-      element?.classList.toggle('fly-in-blurred', entries[0].isIntersecting);
+      if (entries[0].isIntersecting) {
+        element?.classList.add('fly-in-blurred');
+      }
     });
     observer.observe(element);
   }
