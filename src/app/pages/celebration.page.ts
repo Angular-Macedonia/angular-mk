@@ -12,6 +12,6 @@ import {
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class OneYearAngularMkPage {
+export default class CelebrationPage {
 
 }
