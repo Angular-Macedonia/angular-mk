@@ -52,7 +52,7 @@ export class OneYearAngularMacedoniaEvent implements AfterViewInit {
   private checkScrollVisibility(): void {
     const container = this.scrollContainer.nativeElement;
     const endViewport = container.scrollTop < (container.scrollHeight - (container.clientHeight * 2));
-    if (endViewport) {
+    if (endViewport || endViewport === undefined) {
       this.scrollIndicatorVisible.set(true);
     } else {
       this.scrollIndicatorVisible.set(false);
