@@ -158,7 +158,7 @@
 
 .part {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   color: black;
   padding: 0 14px;
   text-align: center;
@@ -294,4 +294,114 @@
 
 .scroll-section {
   scroll-snap-align: start;
+}
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+
+.schedule {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.schedule-group {
+  margin: 0 auto;
+}
+
+.schedule-timeline {
+  width: 4px;
+  height: 100%;
+  background-color: #484848;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.schedule-cards__row:nth-child(odd) {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.schedule-cards__row:nth-child(even) {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.schedule-card {
+  width: calc(50% - 24px);
+  padding: 14px;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  margin-bottom: 24px;
+}
+
+.schedule-cards__row:last-child .schedule-card {
+  margin-bottom: 0;
+}
+
+.schedule-card:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -24px;
+  transform: translate(50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #484848;
+}
+
+.schedule-cards__row:nth-child(odd) > :before {
+  top: 50%;
+  right: -24px;
+  transform: translate(50%, -50%);
+}
+
+.schedule-cards__row:nth-child(even) > :before {
+  top: 50%;
+  left: -24px;
+  transform: translate(-50%, -50%);
+}
+
+.schedule-card__text {
+  margin: 0;
+}
+.schedule-card__text .day {
+  margin: 0;
+}
+.schedule-card__text .description {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .schedule-timeline {
+    left: 0;
+  }
+
+  .schedule-card {
+    width: calc(100% - 24px);
+  }
+
+  .schedule-cards__row:nth-child(odd) {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .schedule-cards__row:nth-child(odd) > :before {
+    top: 50%;
+    left: -24px;
+    transform: translate(-50%, -50%);
+  }
 }
