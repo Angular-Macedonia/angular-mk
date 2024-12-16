@@ -16,6 +16,5 @@ export const appConfig: ApplicationConfig = {
     )),
     provideContent(withMarkdownRenderer()),
     provideHttpClient(withFetch()),
-   
   ],
 };

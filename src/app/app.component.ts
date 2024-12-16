@@ -12,24 +12,12 @@ import { injectSpeedInsights } from '@vercel/speed-insights';
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
   template: `
-    <amk-header [visible]='!hidden'/>
     <main #scroller>
       <router-outlet/>
     </main>
-    <amk-footer/>
   `,
   styles: [
     `
-      :host {
-        margin: 1.25rem;
-        padding: 0;
-      }
-
-      main {
-        margin-top: 4rem;
-        flex: 1;
-      }
-
       amk-footer {
         display: block;
         height: 1vh;
@@ -55,7 +43,7 @@ export class AppComponent implements OnInit {
       next: () => {
         const st = document.documentElement.scrollTop;
         if (st > this.scrollTop + 85) {
-          this.hidden = true; 
+          this.hidden = true;
         } else if (st < this.scrollTop - 85) {
           this.hidden = false;
         }

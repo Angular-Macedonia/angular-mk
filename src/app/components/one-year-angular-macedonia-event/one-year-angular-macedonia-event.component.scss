@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.context {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  z-index: 100;
+}
+
+.context .info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 1;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.context h1 {
+  text-align: center;
+  color: #fff;
+}
+
+.area {
+  top: 0;
+  position: absolute;
+  background: linear-gradient(90deg, #EF4444 0%, #FB923C 51.23%, #F6E05E 100%);
+  width: 100%;
+  height: 100%;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  /* MK Gradient */
+  background: linear-gradient(90deg, #EF4444 0%, #FB923C 51.23%, #F6E05E 100%);
+  transform: rotate(-45deg);
+  bottom: -150px;
+  animation: animate 25s linear infinite;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+
+@keyframes animate {
+
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.part {
+  width: 100%;
+  min-height: 100vh;
+  color: black;
+  padding: 0 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.observe-0, .observe-1, .observe-2, .observe-3, .observe-4, .observe-5 {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.fly-in-blurred {
+  animation: revealing 600ms ease-in-out forwards;
+  text-align: center;
+  overflow: hidden;
+  animation-fill-mode: forwards;
+}
+
+@keyframes revealing {
+  from {
+    visibility: visible;
+    color: gray;
+    transform: translateX(100vw);
+    filter: blur(20px);
+    opacity: 0.5;
+  }
+  to {
+    visibility: visible;
+    transform: translateX(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+#sd {
+  &-container {
+    z-index: 0;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.arrow {
+  position: relative;
+  width: 42px;
+  height: 16px;
+  opacity: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 21px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  &::before {
+    transform: rotate(45deg) translateX(25%)
+  }
+
+  &::after {
+    transform: rotate(-45deg) translateX(-25%)
+  }
+
+  &:nth-child(1) {
+    top: -50px;
+    opacity: 1;
+    animation: arrow2 1s ease 0s infinite;
+  }
+
+  &:nth-child(2) {
+    top: -25px;
+    animation: arrow1 1s ease 0.25s infinite;
+  }
+}
+
+@keyframes arrow1 {
+  from {
+    opacity: 0;
+    top: -25px;
+  }
+
+  to {
+    opacity: 0;
+    top: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes arrow2 {
+  from {
+    opacity: 0;
+    top: -35px;
+  }
+
+  to {
+    opacity: 0;
+    top: -10px;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    width: 100px;
+  }
+}
+
+.scroll-section {
+  scroll-snap-align: start;
+}
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+
+.schedule {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.schedule-group {
+  margin: 0 auto;
+}
+
+.schedule-timeline {
+  width: 4px;
+  height: 100%;
+  background-color: #484848;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.schedule-cards__row:nth-child(odd) {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.schedule-cards__row:nth-child(even) {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.schedule-card {
+  width: calc(50% - 24px);
+  padding: 14px;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  margin-bottom: 24px;
+}
+
+.schedule-cards__row:last-child .schedule-card {
+  margin-bottom: 0;
+}
+
+.schedule-card:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -24px;
+  transform: translate(50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #484848;
+}
+
+.schedule-cards__row:nth-child(odd) > :before {
+  top: 50%;
+  right: -24px;
+  transform: translate(50%, -50%);
+}
+
+.schedule-cards__row:nth-child(even) > :before {
+  top: 50%;
+  left: -24px;
+  transform: translate(-50%, -50%);
+}
+
+.schedule-card__text {
+  margin: 0;
+}
+.schedule-card__text .day {
+  margin: 0;
+}
+.schedule-card__text .description {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .schedule-timeline {
+    left: 0;
+  }
+
+  .schedule-card {
+    width: calc(100% - 24px);
+  }
+
+  .schedule-cards__row:nth-child(odd) {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .schedule-cards__row:nth-child(odd) > :before {
+    top: 50%;
+    left: -24px;
+    transform: translate(-50%, -50%);
+  }
+}
