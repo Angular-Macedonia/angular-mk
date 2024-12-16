@@ -13,5 +13,6 @@ export class FooterComponent {
     { name: 'GitHub', icon: 'bi bi-github', url: 'https://github.com/Angular-Macedonia' },
     { name: 'LinkedIn', icon: 'bi bi-linkedin', url: 'https://www.linkedin.com/company/angular-macedonia/' },
     { name: 'Instagram', icon: 'bi bi-instagram', url: 'https://www.instagram.com/angularmacedonia/' },
+    { name: 'Discord', icon: 'bi bi-discord', url: 'https://discord.gg/DvfP5eUxBR' },
   ];
 }
